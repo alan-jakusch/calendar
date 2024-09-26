@@ -6,42 +6,17 @@
 
 ## Description
 
-This project is designed to test your knowledge of front-end web technologies and assess your ability to create front-end UI products with attention to detail, cross-browser compatibility, standards, and reusability.
+This exercise is to create a demo calendar application using React. It was created using custom hooks and context api to handle state management into the localStorage.
 
+## Features applied
 
-## Assignment
-
-The goal of this exercise is to create a demo calendar application using React.
-
-You are provided a base application with a calendar page at `/calendar`. You must allow the user to create "reminder" cards, as described in the Mandatory features section.
-![CalendarJobsity](/uploads/57147905a7a9cc1e0cf46e7886c76ef7/CalendarJobsity.png)
-
-## Mandatory features
- - Ability to add "*reminders*" (max. 30 characters) for a day and time specified by the user.
- - Ability to include a city as a location for the reminder.
- - Ability to edit reminders - including changing text, city, day, and time.
- - Add a weather service call from [VisualCrossing](https://www.visualcrossing.com/weather/weather-data-services#) and get the average temperature forecast (e.g. 15° C) for the date of the calendar reminder based on the city.
- - Change the weekend days cells' color
- - You will need to **record a video explaining the code** you created, the decisions you made, its functionality, and demonstrating the complete operation of the challenge. _Remember to show the execution from scratch, it should not be running beforehand._
-
-## Bonus (Optional)
-
-- Properly handle overflow when multiple reminders appear on the same date.
-- Unit test the functionality: *Ability to add "*reminders*" (max. 30 characters) for a day and time specified by the user.*
-
-## Considerations
-
- - Show us in the Readme all relevant information about your project.
- - The project is completely focused on Front-end. Ignore the Back-end.
- - Feel free to use small helper libraries for:
- -- UI Elements.
- -- Date/Time handling.
- - We have implemented Redux thunk for state management, but you may use any state manager you are familiar with.
- - Show us your capabilities in CSS and styling, if possible.
- - Feel free to use Typescript if you prefer it
+- I did apply the required features described in the Readme page of this application(https://raw.githubusercontent.com/Jobsity/ReactChallenge/main/README.md).
+- Ability to add "_reminders_" (max. 30 characters) for a day and time specified by the user. Also, include a city.
+- Ability to edit reminders - including changing text, city, day and time.
+- Add a weather service call from [AccuWeather](https://developer.accuweather.com/accuweather-forecast-api/apis/get/forecasts/v1/daily/5day/%7BlocationKey%7D) and get the weather forecast (e.g. Rain) for the date of the calendar reminder based on the city. This shows the forecast only for the current day due to it be using free api account, is possible to see an image based on the weather forecast.
 
 # How to deploy
 
- - Run `npm install` | `yarn install` to install all dependencies.
- - Run `npm start`   | `yarn run` to run the app locally.
- - You can find the project running on `localhost:3000`.
+- Run `npm install` | `yarn install` to install all dependencies.
+- Run `npm start` | `yarn run` to run the app locally.
+- You can find the project running on `localhost:3000`.
