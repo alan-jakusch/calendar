@@ -81,3 +81,28 @@ export const getCurrentDate = () => {
     year,
   };
 };
+
+export const formatDate = (day, month, year) => {
+  if (month < 1 || month > 12) {
+    throw new Error("Invalid month. Use a number between 1 and 12.");
+  }
+
+  const formattedMonth = String(month).padStart(2, "0");
+  const formattedDay = String(day).padStart(2, "0");
+
+  return `${year}-${formattedMonth}-${formattedDay}`;
+};
+
+export function getTodayDate() {
+  const today = new Date();
+
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed
+  const day = String(today.getDate()).padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
+}
+
+export function isDateToday(date) {
+  return date === getTodayDate();
+}

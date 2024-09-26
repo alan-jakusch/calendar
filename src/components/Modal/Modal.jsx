@@ -5,7 +5,17 @@ function Modal() {
   const { isOpen, content, closeModal, title } = useModal();
 
   return (
-    <Dialog onClose={closeModal} open={isOpen}>
+    <Dialog
+      onClose={closeModal}
+      open={isOpen}
+      fullWidth
+      PaperProps={{
+        style: {
+          height: "400px", // Adjust height as needed
+          overflow: "visible", // Prevent scrolling
+        },
+      }}
+    >
       <DialogTitle>{title}</DialogTitle>
       {content}
     </Dialog>

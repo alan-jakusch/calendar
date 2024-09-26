@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { DateNavigator, CalendarGrid } from "components";
 import Modal from "components/Modal/Modal";
+import { AgendaProvider } from "context/AgendaContext";
 import { ModalProvider } from "context/ModalContext";
 import { getCurrentDate } from "utils/dateUtils";
 
@@ -16,7 +17,9 @@ const Calendar = () => {
           date={selectedDate?.date}
           handleDateChange={setSelectedDate}
         />
-        <CalendarGrid date={selectedDate?.date} />
+        <AgendaProvider>
+          <CalendarGrid date={selectedDate?.date} />
+        </AgendaProvider>
         <Modal />
       </div>
     </ModalProvider>
